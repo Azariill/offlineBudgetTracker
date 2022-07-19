@@ -105,6 +105,7 @@ function sendTransaction(isAdding) {
   // if subtracting funds, convert amount to negative number
   if (!isAdding) {
     transaction.value *= -1;
+    alert('Your expense has been added!')
   }
 
   // add to beginning of current array of data
@@ -144,15 +145,15 @@ function sendTransaction(isAdding) {
       nameEl.value = "";
       amountEl.value = "";
     });
+    alert("Your Deposit has been added!");
 }
 
 document.querySelector("#add-btn").onclick = function () {
   sendTransaction(true);
-  alert("Your Deposit has been added!");
+ 
 };
 
 document.querySelector("#sub-btn").onclick = function () {
-  alert("Your expense has been added!");
   sendTransaction(false);
-  alert('Your expense has been added!')
+
 };
