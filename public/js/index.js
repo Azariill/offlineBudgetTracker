@@ -107,6 +107,10 @@ function sendTransaction(isAdding) {
     transaction.value *= -1;
     alert('Your expense has been added!')
   }
+  else{
+    alert("Your Deposit has been added!");
+
+  }
 
   // add to beginning of current array of data
   transactions.unshift(transaction);
@@ -145,7 +149,7 @@ function sendTransaction(isAdding) {
       nameEl.value = "";
       amountEl.value = "";
     });
-    alert("Your Deposit has been added!");
+    
 }
 
 document.querySelector("#add-btn").onclick = function () {
