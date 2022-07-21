@@ -43,7 +43,7 @@ function uploadBudget() {
 
   // get all records from store and set to a variable
   const getAll = budgetObjectStore.getAll();
-  console.log(getAll);
+
 
   getAll.onsuccess = function () {
     // if there was data in indexedDb's store, let's send it to the api server
@@ -66,7 +66,7 @@ function uploadBudget() {
           const budgetObjectStore = transaction.objectStore("new_budget");
           // clear all items in your store
           budgetObjectStore.clear();
-          location.reload();
+    
         })
         .catch((err) => {
           // set reference to redirect back here
@@ -78,3 +78,4 @@ function uploadBudget() {
 
 // listen for app coming back online
 window.addEventListener("online", uploadBudget);
+
