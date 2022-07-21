@@ -1,7 +1,4 @@
 /** @format */
-
-const e = require("express");
-
 let transactions = [];
 let myChart;
 
