@@ -1,5 +1,7 @@
 /** @format */
 
+const e = require("express");
+
 let transactions = [];
 let myChart;
 
@@ -105,7 +107,12 @@ function sendTransaction(isAdding) {
   // if subtracting funds, convert amount to negative number
   if (!isAdding) {
     transaction.value *= -1;
+    alert('Your expense has been added!');
   }
+  else{
+    alert('Your deposit has been added!')
+  }
+  
   // add to beginning of current array of data
   transactions.unshift(transaction);
 
